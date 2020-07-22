@@ -1,54 +1,39 @@
-import random
-import time
-import string
 from os import system
-my_pass = []
+import platform
+import random
+import string
+import time
 
-_ = system('clear')
+def sysName():  # git system name ( Windows / Linux )
+    sysName = platform.system()
+    return sysName
 
-pass_long =int( input('Enter Long Pass You Want : '))
+def cleanScreen():
 
-while pass_long < 8 :
-    _=system('clear')
-    print ('''
-    
-** pass is too shurt try again **
-    
-    ''')
-    pass_long =int( input('Enter Long Pass You Want : '))
+    if sysName() == 'Linux':
+        cln = system('clear')
+    else:
+        cln = system('cls')
 
-ch4 = string.ascii_lowercase
-ch3 = string.ascii_uppercase
-ch2 = string.digits
-ch1 = ['!','@','#','$','%','$','^','&','*']
+def randomPassword():   #creat random and strong password (lHn$dL7*r$0p$@Ip%ImD)
+    password = ""
+    ch1 = string.ascii_lowercase
+    ch2 = string.ascii_uppercase
+    ch3 = string.digits
+    ch4 = ['!','@','#','$','%','$','&','*']
 
-random_ = [ch1,ch2,ch3,ch4]
+    random_ = [ch1,ch2,ch3,ch4]
 
-for i in range (int(pass_long)):
+    for i in range(20):
+        rm_list = random.choice(random_)
+        rmChar = random.choice(rm_list)
+        password += rmChar
+    return (password)
 
-    rm = random.choice(random_)
-    rm_ch = random.choice(rm)
-    my_pass.append(rm_ch)
+cleanScreen()
 
+print('Creating .....\n\n\n')
 
-#print (my_pass)
+time.sleep(3)
 
-
-def listToString(s):  
-    
-    str1 = ""     
-    for ele in s:  
-        str1 += ele
-
-    return str1 
-
-_ = system('clear')
-print ('Creating.......')
-time.sleep(2)
-
-print (f'''
-
-Random Password is: {listToString(my_pass)}
-
-''')
- 
+print (f'Your Randon Password Is : {randomPassword()}\n\n\n')
