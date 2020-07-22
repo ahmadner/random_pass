@@ -7,11 +7,11 @@ how to use :
 if you using linux use sudo to run commands
 
 
-pip3 install random
-pip3 install time
-pip3 install platform
-pip3 install os
-pip3 install string
+pip3 install random <br>
+pip3 install time <br>
+pip3 install platform <br>
+pip3 install os <br>
+pip3 install string <br><br>
 
 
 pytohn3 random_pass
