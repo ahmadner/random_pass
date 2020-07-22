@@ -36,4 +36,4 @@ print('Creating .....\n\n\n')
 
 time.sleep(3)
 
-print (f'Your Randon Password Is : {randomPassword()}\n\n\n')
+print (f'Your Random Password Is : {randomPassword()}\n\n\n')
